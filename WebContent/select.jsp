@@ -8,7 +8,7 @@
 <body>
 	<c:choose>
 		<c:when test="${term >= 1 && term <= 44 }">
-		<img src="presPics/${presidents.get(term-1).firstName}${presidents.get(term-1).lastName}.jpg"/>
+		<img src="presPics/${term}.jpg"/>
 		<p>${presidents.get(term-1).firstName} ${presidents.get(term-1).lastName}</p>
 		</c:when>
 		<c:otherwise>
@@ -16,8 +16,10 @@
 		</c:otherwise>
 	</c:choose>
 	<form action="Presidents" method="POST">
+	<input type="submit" name="submit" value="back"/>
+	<input type="submit" name="submit" value="next"/><br/>
 	Term: <input type="text" name="term" size="3"/>
-	<input type="submit" name="number"/>
+	<input type="submit" name="submit" value="submit"/>
 	</form>
 </body>
 </html>

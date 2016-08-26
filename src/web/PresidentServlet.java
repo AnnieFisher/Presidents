@@ -33,8 +33,20 @@ public class PresidentServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
 		req.setAttribute("presidents", pl.getPresidents());
-		int term = Integer.parseInt(req.getParameter("term"));
-		req.setAttribute("term", term);
+		String direction = req.getParameter("submit");
+		
+		if(direction.equals("back")){
+			term = ((int)session.getAttribute("term"))-1;
+			session.setAttribute("term", term);
+		}
+		else if (direction.equals("next")) {
+			term = ((int)session.getAttribute("term"))+1;
+			session.setAttribute("term", term);
+		}
+		else if (direction.equals("submit")){
+			int term = Integer.parseInt(req.getParameter("term"));
+			session.setAttribute("term", term) ;
+		}
 		req.getRequestDispatcher("/select.jsp").forward(req, resp);
 		
 		
