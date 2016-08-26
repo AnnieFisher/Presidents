@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/Presidents")
 public class PresidentServlet extends HttpServlet {
 	PresidentList pl;
+	int term = 0;
 	
 	@Override
 	public void init() throws ServletException {
@@ -25,12 +26,15 @@ public class PresidentServlet extends HttpServlet {
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setAttribute("presidents", pl.getPresidents());
+		req.setAttribute("term", term);
 		req.getRequestDispatcher("/select.jsp").forward(req, resp);
 	}
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
+		req.setAttribute("presidents", pl.getPresidents());
 		int term = Integer.parseInt(req.getParameter("term"));
+		req.setAttribute("term", term);
 		req.getRequestDispatcher("/select.jsp").forward(req, resp);
 		
 		
