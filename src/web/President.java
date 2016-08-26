@@ -8,9 +8,10 @@ public class President {
 	private int startTerm;
 	private int endTerm;
 	private String party;
+	private String fact;
 
 	public President(int number, String firstName, String middleName,
-			String lastName, int startTerm, int endTerm, String party) {
+			String lastName, int startTerm, int endTerm, String party, String fact) {
 		super();
 		this.number = number;
 		this.firstName = firstName;
@@ -19,6 +20,7 @@ public class President {
 		this.startTerm = startTerm;
 		this.endTerm = endTerm;
 		this.party = party;
+		this.fact = fact;
 	}
 
 	public int getNumber() {
@@ -27,6 +29,13 @@ public class President {
 
 	public void setNumber(int number) {
 		this.number = number;
+	}
+	public String getFact() {
+		return fact;
+	}
+	
+	public void setFact(String fact) {
+		this.fact = fact;
 	}
 
 	public String getFirstName() {

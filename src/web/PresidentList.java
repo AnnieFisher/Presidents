@@ -39,8 +39,9 @@ public class PresidentList {
 	    String lname = tokens[3].trim();
 	    int[] termArray = getTerms(tokens[4].trim());
 	    String party = tokens[5].trim();
+	    String fact = tokens[6].trim();
 
-		return new President(number, fname, mname, lname, termArray[0], termArray[1], party);
+		return new President(number, fname, mname, lname, termArray[0], termArray[1], party, fact);
 	}
 
 	private int[] getTerms(String terms) {
