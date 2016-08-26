@@ -1,20 +1,25 @@
 package web;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.ServletContext;
+
 
 public class PresidentList {
-	private static final String INPUT_FILE = "presidents.csv";
+	private static final String INPUT_FILE = "WEB-INF/presidents.csv";
 	private List<President> presidents = new ArrayList<>();
+	private ServletContext servletContext;
 	
-	public void parse() {
-		try (BufferedReader buf = new BufferedReader(
-				new FileReader(INPUT_FILE))) {
-
+	public PresidentList(ServletContext context) {
+		servletContext = context;
+		InputStream is = servletContext.getResourceAsStream(INPUT_FILE);
+		try (BufferedReader buf = new BufferedReader(new InputStreamReader(is))) {
+			
 			String line;
 			while ((line = buf.readLine()) != null) {
 				President p = buildPresident(line);
