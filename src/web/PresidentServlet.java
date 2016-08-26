@@ -30,7 +30,7 @@ public class PresidentServlet extends HttpServlet {
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
-		
+		int term = Integer.parseInt(req.getParameter("term"));
 		req.getRequestDispatcher("/select.jsp").forward(req, resp);
 		
 		

@@ -6,12 +6,13 @@
 <title>Presidents</title>
 </head>
 <body>
-	<form action="Presidents" method="GET">
-	<select name="Prez's">
+	<form action="Presidents" method="POST">
+	<!--<select name="Prez">
 		<c:forEach var="president" items="${presidents}">
-		<option value="${president.firstName}">${president.firstName} </option>
+		<option value="${president.term}">${president.firstName} ${president.lastName} </option>
 		</c:forEach>
-	</select>
+	</select>  -->
+	Term: <input type="text" name="term" size="3"/>
 	</form>
 </body>
 </html>
