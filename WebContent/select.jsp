@@ -15,25 +15,25 @@
 				<img src="presPics/${term}.jpg" />
 				<p id="name">${presidents.get(term-1).firstName}
 					${presidents.get(term-1).lastName}</p>
+				<form action="Presidents" method="POST">
+					<input type="submit" name="submit" value="back" /> 
+					<input type="submit" name="submit" value="next" /><br />
+				</form>
 			</div>
 			<div id="list">
 				<ul>
-					<li><p>Served as President:
-							${presidents.get(term-1).startTerm}-${presidents.get(term-1).endTerm}</p></li>
+					<li><p>Served as President: ${presidents.get(term-1).startTerm}-${presidents.get(term-1).endTerm}</p></li>
 					<li><p>Affiliated Party: ${presidents.get(term-1).party}</p></li>
-					<li><p>Presidential Fun Fact:
-							${presidents.get(term-1).fact}</p></li>
+					<li><p>Presidential Fun Fact: ${presidents.get(term-1).fact}</p></li>
 				</ul>
 			</div>
 		</c:when>
 		<c:otherwise>
-			<p>Choose a presidential term:</p>
+			
 		</c:otherwise>
 	</c:choose>
 	<form action="Presidents" method="POST">
-		<input type="submit" name="submit" value="back" /> <input
-			type="submit" name="submit" value="next" /><br /> Term: <input
-			type="text" name="term" size="3" /> <input type="submit"
+		Term: <input type="text" name="term" size="3" /> <input type="submit"
 			name="submit" value="submit" />
 	</form>
 </body>

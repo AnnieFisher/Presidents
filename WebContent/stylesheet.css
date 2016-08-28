@@ -13,8 +13,11 @@ a {
 }
 img {
 	padding: 1px;
-	border: 1px solid #021a40;
+	border: 2px inset #021a40;
 	position: center;
+	height: 500px;
+    width: 400px;
+    background-color: #e6e6e6;
 }
 h1 {
 	font-family: cursive;
@@ -35,7 +38,7 @@ background {
 #name {
 	font-family: cursive;
 	font-size: 40px;
-	color: #b3b3b3;
+	color: #ffffff;
 }
 
 #pres {
@@ -48,7 +51,7 @@ background {
 }
 
 #list {
-	position: fixed;
+	position: absolute;
 	margin: auto;
 	background-color: #e6e6e6;
 	background-size: 50%;
@@ -60,7 +63,7 @@ background {
 	bottom: 0;
 	right: 0;
 	width: 300px;
-	border: 3px solid blue;
+	border: 3px inset blue;
 }
 
 #term {
