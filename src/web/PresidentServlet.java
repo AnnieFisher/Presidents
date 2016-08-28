@@ -34,10 +34,10 @@ public class PresidentServlet extends HttpServlet {
 		req.setAttribute("presidents", pl.getPresidents());
 		String direction = req.getParameter("submit");
 
-		if (direction.equals("back")) {
+		if (direction.equals("&#8606")) {
 			term = ((int) session.getAttribute("term")) - 1;
 			session.setAttribute("term", term);
-		} else if (direction.equals("next")) {
+		} else if (direction.equals("&#8608")) {
 			term = ((int) session.getAttribute("term")) + 1;
 			session.setAttribute("term", term);
 		} else if (direction.equals("submit")) {

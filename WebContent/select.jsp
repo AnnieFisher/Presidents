@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
 <title>Presidents</title>
 </head>
@@ -16,8 +17,10 @@
 				<p id="name">${presidents.get(term-1).firstName}
 					${presidents.get(term-1).lastName}</p>
 				<form action="Presidents" method="POST">
-					<input type="submit" name="submit" value="back" /> 
-					<input type="submit" name="submit" value="next" /><br />
+					
+					<input class="button" type="submit" name="submit" value="&#8606;" />
+					<input class="button" type="submit" name="submit" value="&#8608" /><br />
+					
 				</form>
 			</div>
 			<div id="list">
