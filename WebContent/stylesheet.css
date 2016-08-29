@@ -27,14 +27,14 @@ img {
 h1 {
 	font-family: cursive;
 	font-size: 40px;
-	color: #b3b3b3;
+	color: #ffffff;
 }
 
 body {
 	background-image: url("flag5.jpg");
 	background-repeat: no-repeat;	
 	background-size: cover;
-	color: #999999;
+	color: #ffffff;
 }
 
 background {
@@ -51,9 +51,14 @@ background {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	margin-top: 80px;
 	margin-right: -50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
+}
+
+#form {
+	margin-top: -50px;
 }
 
 #list {
@@ -83,7 +88,12 @@ background {
 	bottom: 0;
 	left: 0;
 	width: 200px;
-	background-color: #666666;
+	background-color: #000000;
+}
+
+#invalid {
+	position: absolute;
+	left: 170px;
 }
 
 .button {
