@@ -5,7 +5,6 @@
 a {
 	color: red;
 	font-size: 30px;
-	
 }
 
 #title {
@@ -32,7 +31,7 @@ h1 {
 
 body {
 	background-image: url("flag5.jpg");
-	background-repeat: no-repeat;	
+	background-repeat: no-repeat;
 	background-size: cover;
 	color: #ffffff;
 }
@@ -97,9 +96,9 @@ background {
 }
 
 .button {
-	display: inline-block; 
+	display: inline-block;
 	margin-bottom: 20px;
-	width : 6em;
+	width: 6em;
 	height: 2em;
 	border: none;
 	padding: 0;
@@ -126,4 +125,20 @@ background {
 	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.12, rgb(58,
 		83, 186)), color-stop(0.49, rgb(127, 187, 240)));
 	width: 6em;
+}
+
+#intro {
+	text-align: center;
+	position: fixed;
+	float: center;
+	display: block;
+	margin: auto;
+	margin-left: 20%;
+	background-color: #e6e6e6;
+	background-size: 100%;
+	padding: 25px;
+	color: blue;
+	width: 30%;
+	top: 0;
+	border: 3px inset blue;
 }

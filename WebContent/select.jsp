@@ -34,11 +34,15 @@
 			</div>
 		</c:when>
 		<c:otherwise>
+			
 			<form id="invalid" action="Presidents" method="POST">
+				<div id ="intro">
 				Please enter the term number the president served.<br/>
 				Term: <input type="text" name="term" size="3" /> <input type="submit"
 				name="submit" value="submit" />
+				</div>
 			</form>
+			
 		</c:otherwise>
 	</c:choose>
 	
