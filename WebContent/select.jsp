@@ -18,8 +18,8 @@
 					${presidents.get(term-1).lastName}</p>
 				<form action="Presidents" method="POST">
 					
-					<input class="button" type="submit" name="submit" value="&#8606;" />
-					<input class="button" type="submit" name="submit" value="&#8608" /><br />
+					<input class="button" type="submit" name="submit" value="Back" />
+					<input class="button" type="submit" name="submit" value="Next" /><br />
 					
 				</form>
 			</div>
@@ -32,7 +32,7 @@
 			</div>
 		</c:when>
 		<c:otherwise>
-			
+			<p>The Presidents of the United States</p>
 		</c:otherwise>
 	</c:choose>
 	<form action="Presidents" method="POST">
