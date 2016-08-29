@@ -34,7 +34,6 @@
 			</div>
 		</c:when>
 		<c:otherwise>
-			<p>The Presidents of the United States</p>
 			<form id="invalid" action="Presidents" method="POST">
 				Please enter the term number the president served.<br/>
 				Term: <input type="text" name="term" size="3" /> <input type="submit"

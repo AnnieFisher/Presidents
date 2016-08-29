@@ -11,7 +11,7 @@ a {
 #title {
 	font-family: cursive;
 	font-size: 40px;
-	color: #b3b3b3;
+	color: #ffffff;
 	text-align: center;
 }
 
@@ -31,7 +31,7 @@ h1 {
 }
 
 body {
-	background-image: url("flag5.jpeg");
+	background-image: url("flag5.jpg");
 	background-repeat: no-repeat;	
 	background-size: cover;
 	color: #ffffff;
@@ -97,7 +97,9 @@ background {
 }
 
 .button {
-	display: inline-block; width : 6em;
+	display: inline-block; 
+	margin-bottom: 20px;
+	width : 6em;
 	height: 2em;
 	border: none;
 	padding: 0;
