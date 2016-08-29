@@ -41,8 +41,13 @@ public class PresidentServlet extends HttpServlet {
 			term = ((int) session.getAttribute("term")) + 1;
 			session.setAttribute("term", term);
 		} else if (direction.equals("submit")) {
-			int term = Integer.parseInt(req.getParameter("term"));
-			session.setAttribute("term", term);
+			try{
+				int term = Integer.parseInt(req.getParameter("term"));
+				session.setAttribute("term", term);
+			}
+			catch(Exception e) {
+				term = 0;
+			}
 		}
 		req.getRequestDispatcher("/select.jsp").forward(req, resp);
 
