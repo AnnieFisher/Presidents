@@ -16,11 +16,13 @@
 				<img src="presPics/${term}.jpg" />
 				<p id="name">${presidents.get(term-1).firstName}
 					${presidents.get(term-1).lastName}</p>
+
 				<form id="form" action="Presidents" method="POST">
 					Term: <input type="text" name="term" size="3" /> <input type="submit"
 					name="submit" value="submit" /><br/><br/>
-					<input class="button" type="submit" name="submit" value="&#8606;" />
-					<input class="button" type="submit" name="submit" value="&#8608" /><br />
+					<input class="button" type="submit" name="submit" value="Back" />
+					<input class="button" type="submit" name="submit" value="Next" /><br />
+
 				</form>
 			</div>
 			<div id="list">
@@ -32,6 +34,7 @@
 			</div>
 		</c:when>
 		<c:otherwise>
+			<p>The Presidents of the United States</p>
 			<form id="invalid" action="Presidents" method="POST">
 				Please enter the term number the president served.<br/>
 				Term: <input type="text" name="term" size="3" /> <input type="submit"
